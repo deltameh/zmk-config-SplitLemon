@@ -10,9 +10,16 @@
     col-offset = <6>;
 };
 
-&five_column_transform {
-    col-offset = <6>;
-};
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "default_kscan";
+        diode-direction = "col2row";
 
 kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
@@ -26,4 +33,6 @@ kscan0: kscan0 {
           <&gpio1 4 GPIO_ACTIVE_HIGH>,
           <&gpio1 6 GPIO_ACTIVE_HIGH>
         ;
+      };
+   };
 };
