@@ -1,6 +1,6 @@
 #include "SplitLemon.dtsi"
 
-&kscan0 {
+&kscan {
     col-gpios
         = <&gpio1 13 GPIO_ACTIVE_HIGH>,
           <&gpio1 11 GPIO_ACTIVE_HIGH>,
