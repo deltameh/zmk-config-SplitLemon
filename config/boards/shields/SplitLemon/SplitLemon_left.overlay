@@ -4,11 +4,16 @@
 #include "SplitLemon.dtsi"
 
 
-kscan0: kscan0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
-        wakeup-source;
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
 
+    default_kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "default_kscan";
+        diode-direction = "col2row";
     col-gpios
         = <&gpio1 13 GPIO_ACTIVE_HIGH>,
           <&gpio1 11 GPIO_ACTIVE_HIGH>,
@@ -33,4 +38,5 @@ kscan0: kscan0 {
               <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
               <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+    }
 };
