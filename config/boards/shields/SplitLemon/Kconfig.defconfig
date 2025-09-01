@@ -1,4 +1,4 @@
-if SHIELD_SPLITLEMON_LEFT
+if SHIELD_SPLITLEMON
 
 config ZMK_KEYBOARD_NAME
     default "SplitLemon"
