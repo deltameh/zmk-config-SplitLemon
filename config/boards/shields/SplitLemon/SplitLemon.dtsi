@@ -6,6 +6,23 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include <layouts/foostan/corne/5column.dtsi>
+#include <layouts/foostan/corne/6column.dtsi>
+
+&foostan_corne_6col_layout {
+    transform = <&default_transform>;
+};
+
+&foostan_corne_5col_layout {
+    transform = <&five_column_transform>;
+};
+
+/ {
+    chosen {
+        zephyr,display = &oled;
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &foostan_corne_6col_layout;
+    };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
@@ -23,8 +40,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
         >;
     };
 
-
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
@@ -40,6 +55,6 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9)
               <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
               <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-
     };
+};
 
