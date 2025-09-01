@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "SlpitLemon.dtsi"
+#include "SplitLemon.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -18,7 +18,7 @@ kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
-        
+
         = <&gpio1 15 GPIO_ACTIVE_HIGH>,
           <&gpio0 2 GPIO_ACTIVE_HIGH>,
           <&gpio0 29 GPIO_ACTIVE_HIGH>,
