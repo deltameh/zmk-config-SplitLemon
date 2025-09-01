@@ -1,2 +1,6 @@
 config SHIELD_SPLITLEMON
-    def_bool $(shields_list_contains,SplitLemon)
+    def_bool $(shields_list_contains,SplitLemon_left)
+
+config SHIELD_SPLITLEMON
+    def_bool $(shields_list_contains,SplitLemon_right)
+
