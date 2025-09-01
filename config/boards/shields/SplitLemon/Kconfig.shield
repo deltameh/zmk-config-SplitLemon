@@ -1,2 +1,2 @@
-config SHIELD_SPLITLEMON_LEFT
+config SHIELD_SPLITLEMON
     def_bool $(shields_list_contains,SplitLemon)
