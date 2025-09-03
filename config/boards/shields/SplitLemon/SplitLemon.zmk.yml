@@ -4,7 +4,6 @@ name: SplitLemon
 type: shield
 rl: https://github.com/deltameh/zmk-config-SplitLemon
 requires: [nice_nano_v2]
-exposes: [i2c_oled]
 features:
   - keys
 siblings:
