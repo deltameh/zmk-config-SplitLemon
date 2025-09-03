@@ -1,0 +1,9 @@
+file_format: "1"
+id: SplitLemon
+name: SplitLemon
+type: shield
+features:
+  - keys
+siblings:
+  - SplitLemon_left
+  - SplitLemon_right

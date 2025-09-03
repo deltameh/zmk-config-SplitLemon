@@ -6,6 +6,8 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+CONFIG_ZMK_BLE=y
+
 endif
 
 if SHIELD_CORNE_LEFT || SHIELD_CORNE_RIGHT
